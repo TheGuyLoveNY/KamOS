@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59D30F46-3D01-49D7-AE99-AA1AD4951458}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Main_Project</RootNamespace>
+    <AssemblyName>Main Project</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Mouse_Control_via_Webcam_without_emgu_dlls (1)\Mouse Control via Webcam\objecttracking_openCV\bin\Debug\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.DebuggerVisualizers.VS2010, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Mouse_Control_via_Webcam_without_emgu_dlls (1)\Mouse Control via Webcam\objecttracking_openCV\bin\Debug\Emgu.CV.DebuggerVisualizers.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.GPU, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Mouse_Control_via_Webcam_without_emgu_dlls (1)\Mouse Control via Webcam\objecttracking_openCV\bin\Debug\Emgu.CV.GPU.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.ML, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Mouse_Control_via_Webcam_without_emgu_dlls (1)\Mouse Control via Webcam\objecttracking_openCV\bin\Debug\Emgu.CV.ML.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.OCR">
+      <HintPath>..\..\Mouse_Control_via_Webcam_without_emgu_dlls (1)\Mouse Control via Webcam\objecttracking_openCV\bin\Debug\Emgu.CV.OCR.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.Stitching">
+      <HintPath>..\..\Mouse_Control_via_Webcam_without_emgu_dlls (1)\Mouse Control via Webcam\objecttracking_openCV\bin\Debug\Emgu.CV.Stitching.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Emgu\emgucv-windows-x86 2.2.1.1150\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util, Version=2.2.1.1150, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Mouse_Control_via_Webcam_without_emgu_dlls (1)\Mouse Control via Webcam\objecttracking_openCV\bin\Debug\Emgu.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="jSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\jSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Camera Mouse 2016.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Camera Mouse 2016.Designer.cs">
+      <DependentUpon>Camera Mouse 2016.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Email.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Email.Designer.cs">
+      <DependentUpon>Email.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GestureBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GestureBoard.Designer.cs">
+      <DependentUpon>GestureBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KamPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KamPlayer.Designer.cs">
+      <DependentUpon>KamPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kam_Browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kam_Browser.Designer.cs">
+      <DependentUpon>Kam_Browser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MP3Player.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MP3Player.Designer.cs">
+      <DependentUpon>MP3Player.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TextEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextEditor.Designer.cs">
+      <DependentUpon>TextEditor.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Camera Mouse 2016.resx">
+      <DependentUpon>Camera Mouse 2016.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Email.resx">
+      <DependentUpon>Email.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GestureBoard.resx">
+      <DependentUpon>GestureBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KamPlayer.resx">
+      <DependentUpon>KamPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kam_Browser.resx">
+      <DependentUpon>Kam_Browser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MP3Player.resx">
+      <DependentUpon>MP3Player.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TextEditor.resx">
+      <DependentUpon>TextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cvextern.dll" />
+    <Content Include="Emgu.CV.DebuggerVisualizers.VS2010.dll" />
+    <Content Include="Emgu.CV.dll" />
+    <Content Include="Emgu.CV.GPU.dll" />
+    <Content Include="Emgu.CV.ML.dll" />
+    <Content Include="Emgu.CV.UI.dll" />
+    <Content Include="Emgu.Util.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="IcyCursor.cur" />
+    <Content Include="opencv_calib3d220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_contrib220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_core220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_features2d220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_ffmpeg220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_flann220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_gpu220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_highgui220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\001433-3d-transparent-glass-icon-media-a-media25-arrows-skip-back.png" />
+    <None Include="Resources\001434-3d-transparent-glass-icon-media-a-media26-arrows-skip-forward.png" />
+    <None Include="Resources\001440-3d-transparent-glass-icon-media-a-media292-speaker-volume-right.png" />
+    <None Include="Resources\icon-folder-open-button-documents-document.png" />
+    <None Include="Resources\Pause1.png" />
+    <None Include="Resources\Play1.png" />
+    <None Include="Resources\Power1.png" />
+    <None Include="Resources\Silent.png" />
+    <None Include="Resources\Stop1.png" />
+    <None Include="Resources\VolumeDown1.png" />
+    <None Include="Resources\VolumeUp1.png" />
+    <None Include="Resources\MainMediaPlayerICon.png" />
+    <None Include="Resources\MainMediaPlayerICon2.png" />
+    <None Include="Resources\send-mail-icon.jpg" />
+    <None Include="Resources\send-mail-icon1.jpg" />
+    <None Include="Resources\attachement-512.png" />
+    <None Include="Resources\GmailMainIcon.png" />
+    <None Include="Resources\shutdown_button_wallpaper_software_computers_wallpaper_2723.jpg" />
+    <None Include="Resources\3d_modeling_a_human_head_with_polygons_in_3ds_max1.jpg" />
+    <None Include="Resources\123515-matte-red-and-white-square-icon-people-things-hand-left1-ps %281%29.png" />
+    <None Include="Resources\123515-matte-red-and-white-square-icon-people-things-hand-left1-ps.png" />
+    <None Include="Resources\129339-simple-red-square-icon-people-things-hand-left11.png" />
+    <None Include="Resources\human_head_reference_picture_front.jpg" />
+    <None Include="Resources\human_head_reference_picture_front1.jpg" />
+    <None Include="Resources\human_head_reference_picture_front2.jpg" />
+    <None Include="Resources\music.png" />
+    <None Include="Resources\Mp3PlayerMain.png" />
+    <None Include="Resources\new_document.png" />
+    <None Include="Resources\Blue Open.png" />
+    <None Include="Resources\Actions-document-save-icon.png" />
+    <None Include="Resources\1328102005_Save.png" />
+    <None Include="Resources\Save-icon.png" />
+    <None Include="Resources\Undo-icon.png" />
+    <None Include="Resources\Redo-icon.png" />
+    <None Include="Resources\notepad.png" />
+    <None Include="Resources\13683000651777671333apps-accessories-text-editor-icon-md.png" />
+    <None Include="Resources\075726-3d-glossy-blue-orb-icon-business-computer-keyboard.png" />
+    <None Include="Resources\Imp.png" />
+    <None Include="Resources\3d-heart-with-headphones_23-2147502512.jpg" />
+    <None Include="Resources\46092682-restart-icon-internet-button-on-white-background.jpg" />
+    <None Include="Resources\46092682-restart-icon-internet-button-on-white-background1.jpg" />
+    <None Include="Resources\play_google_com1.jpg" />
+    <None Include="Resources\Untitled.png" />
+    <None Include="Resources\222.png" />
+    <None Include="Resources\BackspaceIcon.png" />
+    <None Include="Resources\EnterICon.png" />
+    <None Include="Resources\shiftIcon.png" />
+    <None Include="Resources\enter--icon-84103.png" />
+    <None Include="Resources\ISOIEC-9995-7-023--ISO-7000-0651--Symbol-for-Return-New-Line.svg.png" />
+    <None Include="Resources\windows-8-icon.png" />
+    <Content Include="ZedGraph.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Back.png" />
+    <None Include="Resources\gtk-go-back-ltr.png" />
+    <None Include="Resources\gtk-go-back-ltr2.png" />
+    <None Include="Resources\Refresh.jpg" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\Stop.jpg" />
+    <None Include="Resources\WebIcon.png" />
+    <None Include="Resources\smart-home-icon.png" />
+    <None Include="Resources\WebIconMain.png" />
+    <None Include="Resources\BackButton.png" />
+    <None Include="Resources\ForwardButton.png" />
+    <None Include="Resources\ForwardButton1.png" />
+    <Content Include="jSkin.vssscc" />
+    <None Include="Resources\BackButton5.png" />
+    <None Include="Resources\ForwardButton5.png" />
+    <None Include="Resources\Stop2.png" />
+    <None Include="Resources\Refreash2.png" />
+    <None Include="Resources\MainBackground_XX.jpg" />
+    <None Include="Resources\AmazonLogo.png" />
+    <None Include="Resources\FBIcon.jpg" />
+    <None Include="Resources\FlipkartLogo.png" />
+    <None Include="Resources\InstaIcon.png" />
+    <None Include="Resources\SnapDealIcon.png" />
+    <None Include="Resources\TwitterIcon.png" />
+    <None Include="Resources\WikiIcon.jpg" />
+    <None Include="Resources\YouTubeIcon.png" />
+    <None Include="Resources\FBMain.png" />
+    <None Include="Resources\FlipkartLogoMain.png" />
+    <None Include="Resources\InstaIconMain.png" />
+    <None Include="Resources\SnapDealMain.png" />
+    <None Include="Resources\TwitterIconMain.png" />
+    <None Include="Resources\WikiMain.png" />
+    <None Include="Resources\YouTubeIconMain.png" />
+    <None Include="Resources\yahoo.png" />
+    <Content Include="opencv_imgproc220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_legacy220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_ml220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_objdetect220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="opencv_video220.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="user32.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\HeadMovementTracker\HeadMovementTracker\HeadTracker\HeadTracker.csproj">
+      <Project>{82a961b1-b490-4126-94d9-06911e62ed79}</Project>
+      <Name>HeadTracker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Mouse_Control_via_Webcam_without_emgu_dlls %281%29\Mouse Control via Webcam\objecttracking_openCV\HandProject.csproj">
+      <Project>{65ba98b4-bade-447e-9def-397877f9accf}</Project>
+      <Name>HandProject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
